@@ -1,0 +1,70 @@
+<div class = "home-container">
+	<div class="profile gap">		
+		<h3>Hi {{vm.user.firstName}}!!</h3>
+		
+	</div>
+	
+	<div class="main">
+		<div class="article gap">
+			<div class="form-group">
+			  <label class = "articlehead gap"for="postNew">Post</label>
+			  <textarea class="form-control" rows="10" id="postNew" ng-model="newPost"></textarea>			  
+			</div>
+			<div class="form-group">
+	            <button class="btn " ng-click="vm.savePost()">
+	            	<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+	            </button>
+	            <button class="btn " ng-click="vm.clearAll()">
+	            	<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+	            </button>	            
+	        </div>	
+	        <div ng-model="postarea">{{postarea}}</div>		
+		</div>
+		<div class = "article gap" ng-repeat = 'post in posts '>
+			<div class = "articlehead gap">
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	            {{post.username}}	            
+	            <a class="pull-right"><span class="glyphicon glyphicon-edit" aria-hidden="true" ng-click = "editPost(post,'edit')">
+	            </span></a> 
+				<a class="pull-right"><span class="glyphicon glyphicon-remove " aria-hidden="true" ng-click = "deletePost(post)">
+				</span></a>
+	        </div>
+			<div class = "gap angular-with-newlines" ng-model = "post">{{post.post}}</div>
+			<div>
+				<hr>
+					<a><span class="glyphicon" ng-class = "{{post.lc | likeFilter}} ? 'glyphicon-thumbs-up' : 'glyphicon-thumbs-down' " 
+						aria-hidden="true" ng-click = "editPost(post,'','lc')"></span></a> 
+					<span>{{post.lc | likeFilter}}</span>
+					<a data-toggle="collapse" for="comment" data-target="#commentBox-{{$index}}">
+						<span class="glyphicon glyphicon-comment " aria-hidden="true" ></span></a>
+				</br></br>
+				<div id="commentBox-{{$index}}" class="collapse">
+					<div ng-repeat = "lc in post.lc | filter:emptyOrNull">
+						<span class="glyphicon glyphicon-user"> {{lc.username}} : </span><span>{{lc.comment}}</span>		
+						</br></br>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control " id="comment" ng-model="comment[$index]" placeholder="Write a comment..."/>
+					</div>
+        			<div class="form-group">
+        				<button type="submit" class="btn" ng-click = "editPost(post,comment[$index],'lc')">Comment</button>
+        			</div>
+        		</div>
+	        </div>
+		</div>
+	</div>
+
+	<div class="misc gap">
+		<div class = "articlehead gap">
+			<div>FOLLOW</div>
+		</div>
+		<div class = "gap" ng-repeat = 'user in users'>
+			<div class = "form-group">
+				<hr>
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{user.firstName}} {{user.lastName}}
+				<button class="btn pull-right" ng-click = "follower(user)">Follow</button> 
+	        </div>
+		</div>
+
+	</div>
+</div>

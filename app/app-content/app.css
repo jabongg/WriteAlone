@@ -1,0 +1,110 @@
+body {
+    color: #6b5194;
+    background-color: #191221 ; 
+    background-image: url('../app-content/img/Wood_bg.jpg');
+}
+.tasks {
+    max-height: 19em;
+    overflow-y: scroll;
+    border: 3px solid #ccc;
+    list-style: none;
+    padding: 0;
+}
+
+
+.angular-with-newlines {
+    white-space: pre-wrap;
+}
+
+.container{
+	width: auto;
+	padding: 5px;
+}
+
+.glyphicon{
+	cursor: pointer;
+	margin: 5px;
+}
+
+hr{
+	margin: 0px;
+    border-top: 1px solid #cabddb;
+}
+
+.btn{
+	background-color: #cabddb;
+	padding: 0px 10px;
+}
+
+.btn:hover{
+	background-color: #6b5194;
+	color: white;	
+	box-shadow: 0 0 10px 0  #6b5194;
+}
+
+a{
+	color: black;
+	margin-left: 10px;
+}
+
+a:hover{
+	color: #6b5194;
+}
+
+.flash-message {
+    margin-top: 20px;
+}
+
+.pull-right{
+	float: right;
+}
+
+.pull-left{
+	float: left;
+}
+
+.gap{
+	margin: 3px;
+	padding: 5px;
+	border: #e4deed solid 1px;
+	border-radius: 3px;  
+	background-color: #e4deed; 
+}
+
+.profile{
+	width: 20%;
+	height: 160px;	
+	float: left;
+	position: fixed;
+}
+
+.main{
+	width: 54%;	
+	color : black;
+	float: left;
+	margin-left: 21%
+}
+
+.article{
+	width: 99%;	
+	box-shadow: 0 2px 10px 0  #6b5194;
+}
+
+.content{
+	/*display : flex;*/
+}
+
+.articlehead{
+	width: 100%;
+	background-color: #cabddb;
+}
+
+.misc {
+	width: 24%;
+	height: 320px;
+	float: right;
+	color: black;
+	overflow: auto;
+	margin-left: 75%;
+	position: fixed;
+}
