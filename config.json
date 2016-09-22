@@ -1,5 +1,5 @@
 {
-    "connectionString": "localhost:27017/mean-auth",
-    "apiUrl":  "mongodb://jangu:mongolab_2016@ds015750.mlab.com:15750/wriders",
+    "connectionString": "mongodb://jangu:mongolab_2016@ds015750.mlab.com:15750/wriders",
+    "apiUrl":  "https://writealone-app.herokuapp.com/",
     "secret": "mongolab_2016"
 }
