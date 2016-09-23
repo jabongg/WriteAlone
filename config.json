@@ -1,5 +1,5 @@
 {
-	"database":"mongodb://root:password@ds061238.mongolab.com:61238/wriders",//there should not be space .
+	"database":"mongodb://root:password@ds015750.mlab.com:15750/wriders",//there should not be space .
 	"port":process.env.PORT || 3000,
 	"secretKey":"mongolab_2016"
 }
